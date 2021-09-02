@@ -1,0 +1,24 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="wind <= 1.5\nentropy = 0.811\nsamples = 12\nvalue = [3, 9]\nclass = play_yes", fillcolor="#7bbeee"] ;
+1 [label="entropy = 0.0\nsamples = 5\nvalue = [0, 5]\nclass = play_yes", fillcolor="#399de5"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="outlook <= 0.5\nentropy = 0.985\nsamples = 7\nvalue = [3, 4]\nclass = play_yes", fillcolor="#cee6f8"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="entropy = 0.0\nsamples = 2\nvalue = [0, 2]\nclass = play_yes", fillcolor="#399de5"] ;
+2 -> 3 ;
+4 [label="temperature <= 0.5\nentropy = 0.971\nsamples = 5\nvalue = [3, 2]\nclass = play_no", fillcolor="#f6d5bd"] ;
+2 -> 4 ;
+5 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = play_yes", fillcolor="#399de5"] ;
+4 -> 5 ;
+6 [label="temperature <= 1.5\nentropy = 0.811\nsamples = 4\nvalue = [3, 1]\nclass = play_no", fillcolor="#eeab7b"] ;
+4 -> 6 ;
+7 [label="entropy = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = play_no", fillcolor="#e58139"] ;
+6 -> 7 ;
+8 [label="humidity <= 0.5\nentropy = 0.918\nsamples = 3\nvalue = [2, 1]\nclass = play_no", fillcolor="#f2c09c"] ;
+6 -> 8 ;
+9 [label="entropy = 1.0\nsamples = 2\nvalue = [1, 1]\nclass = play_no", fillcolor="#ffffff"] ;
+8 -> 9 ;
+10 [label="entropy = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = play_no", fillcolor="#e58139"] ;
+8 -> 10 ;
+}
